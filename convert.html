@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Conversion</title>
+</head>
+<body>
+	<input type="text" id="SecNum">
+	<input type="button" value="Convert" onclick="Convert()">
+	<br/>
+	<div id="Resultant"></div>
+	<script>
+		function Convert(){
+			var num=parseInt(document.getElementById("SecNum").value);
+			h = Math.floor(num/3600);
+			m = Math.floor(num % 3600 / 60);
+			s = Math.floor(num % 3600 % 60);
+			document.getElementById("Resultant").innerHTML=(h+ "hours " +" "+m+ " minutes " +" "+s+ " seconds").toString();
+		}
+	</script>
+</body>
+</html>
